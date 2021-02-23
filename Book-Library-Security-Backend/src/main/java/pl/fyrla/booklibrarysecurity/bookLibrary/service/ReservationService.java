@@ -22,6 +22,10 @@ public class ReservationService {
     private final BooksRepository booksRepository;
     private final ReservationRepository reservationRepository;
 
+    public List<Reservation> getAllReservation() {
+        return reservationRepository.findAll();
+    }
+
     public List<Reservation> getAllReservationFromBook(Long bookId) {
         Books books = booksRepository.findById(bookId).orElseThrow(() ->
                 new BookNotFoundException(bookId.toString()));

@@ -10,6 +10,7 @@ import {BookLibraryEditComponent} from './book-library-edit/book-library-edit.co
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {BookLibraryTilesComponent} from './book-library-tiles/book-library-tiles.component';
 import { BookLibraryReservationComponent } from './book-library-reservation/book-library-reservation.component';
+import { BookReservationListComponent } from './book-reservation-list/book-reservation-list.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BookLibraryReservationComponent } from './book-library-reservation/book
     BookLibraryAddComponent,
     BookLibraryEditComponent,
     BookLibraryTilesComponent,
-    BookLibraryReservationComponent
+    BookLibraryReservationComponent,
+    BookReservationListComponent
   ],
   imports: [
     CommonModule,

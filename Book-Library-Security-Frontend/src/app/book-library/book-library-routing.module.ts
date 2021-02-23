@@ -4,6 +4,7 @@ import {BookLibraryAddComponent} from './book-library-add/book-library-add.compo
 import {BookLibraryEditComponent} from './book-library-edit/book-library-edit.component';
 import {BookLibraryTilesComponent} from './book-library-tiles/book-library-tiles.component';
 import {BookLibraryReservationComponent} from './book-library-reservation/book-library-reservation.component';
+import {BookReservationListComponent} from './book-reservation-list/book-reservation-list.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'books-view',
     component: BookLibraryTilesComponent
+  },
+  {
+    path: 'books-reservation',
+    component: BookReservationListComponent
   },
   {
     path: 'book-reservation/:id',

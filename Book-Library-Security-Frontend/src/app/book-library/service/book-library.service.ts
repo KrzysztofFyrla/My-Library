@@ -30,6 +30,10 @@ export class BookLibraryService {
     return this.http.get(`${this.configUrl.BOOK_URL}`);
   }
 
+  getReservationList(): Observable<any> {
+    return this.http.get(`${this.configUrl.RESERVATION_URL + '/all'}`);
+  }
+
   getBooks() {
     return this.http.get<Books[]>('http://localhost:8080/books');
   }
@@ -76,10 +80,6 @@ export class BookLibraryService {
     return this.http.post(`${this.configUrl.TYPE_URL}`, type);
   }
 
-  createReservation(reservation: Object): Observable<Object> {
-    return this.http.post(`${this.configUrl.RESERVATION_URL}`, reservation);
-  }
-
   test(reservation: Reservation): Observable<Reservation> {
     return this.http.post<Reservation>('http://localhost:8080/reservation', reservation);
   }
@@ -88,6 +88,10 @@ export class BookLibraryService {
 
   deleteBook(id: number): Observable<any> {
     return this.http.delete(this.configUrl.BOOK_URL + '/{id}?id=' + id, {responseType: 'text'});
+  }
+
+  deleteReservation(id: number): Observable<any> {
+    return this.http.delete(this.configUrl.RESERVATION_URL + '/{id}?id=' + id, {responseType: 'text'});
   }
 
   deleteRating(id: number): Observable<any> {

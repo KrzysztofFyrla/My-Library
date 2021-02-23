@@ -21,6 +21,11 @@ public class ReservationController {
 
     private final ReservationService reservationService;
 
+    @GetMapping("/reservation/all")
+    public List<Reservation> getAllReservation() {
+        return reservationService.getAllReservation();
+    }
+
     @GetMapping("/reservation/{bookId}")
     public ResponseEntity<List<Reservation>> getAllReservationForBook(@PathVariable Long bookId) {
         return ResponseEntity.status(HttpStatus.OK)
