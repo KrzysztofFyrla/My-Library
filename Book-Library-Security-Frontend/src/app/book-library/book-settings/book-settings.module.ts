@@ -10,6 +10,7 @@ import {TypeDialogComponent} from './type-dialog/type-dialog.component';
 import {MaterialModule} from '../../material.module';
 import {FormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {PageHeaderComponent} from '../../page-header/page-header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     BookRatingComponent,
     BookTypeComponent,
     RatingDialogComponent,
-    TypeDialogComponent
+    TypeDialogComponent,
+    PageHeaderComponent
+  ],
+  exports: [
+    PageHeaderComponent
   ],
   imports: [
     CommonModule,

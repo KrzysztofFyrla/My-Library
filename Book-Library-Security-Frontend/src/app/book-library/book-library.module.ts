@@ -11,6 +11,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {BookLibraryTilesComponent} from './book-library-tiles/book-library-tiles.component';
 import { BookLibraryReservationComponent } from './book-library-reservation/book-library-reservation.component';
 import { BookReservationListComponent } from './book-reservation-list/book-reservation-list.component';
+import {BookSettingsModule} from './book-settings/book-settings.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BookReservationListComponent } from './book-reservation-list/book-reser
     BookLibraryRoutingModule,
     FormsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    BookSettingsModule
   ]
 })
 export class BookLibraryModule {
