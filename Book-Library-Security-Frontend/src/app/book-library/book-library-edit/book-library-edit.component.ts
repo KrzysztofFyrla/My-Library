@@ -75,7 +75,7 @@ export class BookLibraryEditComponent implements OnInit {
   }
 
   private goToList(): void {
-    this.router.navigate(['/books']);
+    this.router.navigate(['/book']);
   }
 
   onSubmit(): void {

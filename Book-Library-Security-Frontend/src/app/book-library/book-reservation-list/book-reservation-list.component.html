@@ -24,6 +24,11 @@
       <mat-cell *matCellDef="let element" data-label="Date reservation"> {{element.reservationDate | date:'MM-dd-yyyy'}} </mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="username">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> User</mat-header-cell>
+      <mat-cell *matCellDef="let element" data-label="Date reservation"> {{element.username}} </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="delete">
       <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
       <mat-cell *matCellDef="let element">

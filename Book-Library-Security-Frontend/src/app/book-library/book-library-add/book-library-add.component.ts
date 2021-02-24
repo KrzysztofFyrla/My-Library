@@ -64,7 +64,7 @@ export class BookLibraryAddComponent implements OnInit {
 
   goToList(): void {
     /*this.router.navigate(['..']);*/
-    const url = '/books';
+    const url = '/book';
     this.router.navigateByUrl(url);
   }
 
