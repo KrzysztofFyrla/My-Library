@@ -12,6 +12,7 @@ import {BookLibraryTilesComponent} from './book-library-tiles/book-library-tiles
 import { BookLibraryReservationComponent } from './book-library-reservation/book-library-reservation.component';
 import { BookReservationListComponent } from './book-reservation-list/book-reservation-list.component';
 import {BookSettingsModule} from './book-settings/book-settings.module';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {BookSettingsModule} from './book-settings/book-settings.module';
     BookLibraryEditComponent,
     BookLibraryTilesComponent,
     BookLibraryReservationComponent,
-    BookReservationListComponent
+    BookReservationListComponent,
+    BookComponent
   ],
   imports: [
     CommonModule,

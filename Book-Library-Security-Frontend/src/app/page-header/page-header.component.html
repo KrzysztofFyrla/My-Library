@@ -1,6 +1,11 @@
-<div class="page-header">
-  <h1 class="page-title">
-    <mat-icon style="font-size: 26px">{{icon}}</mat-icon>
-    {{title}}
-  </h1>
+<div class="page-header" fxLayout="row">
+  <div fxFlex="92" fxFlex.lt-sm="100">
+    <h1 class="page-title">
+      <mat-icon style="font-size: 26px">{{icon}}</mat-icon>
+      {{title}}
+    </h1>
+  </div>
+  <div fxFlex="8" fxFlex.lt-sm="100">
+    <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+  </div>
 </div>

@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
-import {BookLibraryComponent} from './book-library/book-library/book-library.component';
+import {LoginComponent} from './security/login/login.component';
 
 const routes: Routes = [
   {
@@ -9,18 +9,25 @@ const routes: Routes = [
     component: AppComponent,
     children: [
       {
-        path: '', redirectTo: 'books', pathMatch: 'full'
+        path: '',
+        redirectTo: 'auth',
+        pathMatch: 'full'
       },
       {
-        path: 'books',
-        component: BookLibraryComponent
+        path: 'auth',
+        component: LoginComponent
       },
       {
-        path: 'books',
-        loadChildren: () => import('./book-library/book-library.module')
-          .then(m => m.BookLibraryModule)
+        path: 'auth',
+        loadChildren: () => import('./security/security.module')
+          .then(m => m.SecurityModule)
       }
     ]
+  },
+  {
+    path: 'panel',
+    loadChildren: () => import('./book-library/book-library.module')
+      .then(m => m.BookLibraryModule)
   }
 ];
 
@@ -28,4 +35,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

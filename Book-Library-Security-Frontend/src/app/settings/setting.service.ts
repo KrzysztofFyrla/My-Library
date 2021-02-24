@@ -28,4 +28,9 @@ export class SettingService {
   get RESERVATION_URL(): string {
     return this.mainUrl + '/reservation';
   }
+
+  /*auth.service*/
+  get AUTH_API(): string {
+    return this.mainUrl + '/api/auth/';
+  }
 }

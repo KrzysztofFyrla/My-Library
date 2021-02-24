@@ -72,25 +72,34 @@ export class BookLibraryComponent implements OnInit {
   }
 
   editBook(id: number): void {
-    const url = '/books/book-edit/' + id;
+    const url = '/book-edit/' + id;
     this.router.navigateByUrl(url);
     this.reloadData();
   }
 
   reservationBook(id: number): void {
-    const url = 'books/book-reservation/' + id;
+    const url = '/book-reservation/' + id;
     this.router.navigateByUrl(url);
     this.reloadData();
   }
 
   addLibrary(): void {
-    const url = '/books/book-add';
+    const url = '/book-add';
     this.router.navigateByUrl(url);
   }
 
   settingsLibrary(): void {
-    const url = '/books/book-setting/type';
+    const url = '/book-setting/type';
     this.router.navigateByUrl(url);
   }
 
+  bookView(): void {
+    const url = '/books-view';
+    this.router.navigateByUrl(url);
+  }
+
+  bookReservation(): void {
+    const url = '/books-reservation';
+    this.router.navigateByUrl(url);
+  }
 }
