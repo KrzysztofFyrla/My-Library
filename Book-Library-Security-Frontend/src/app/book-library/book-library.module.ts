@@ -13,6 +13,7 @@ import { BookLibraryReservationComponent } from './book-library-reservation/book
 import { BookReservationListComponent } from './book-reservation-list/book-reservation-list.component';
 import {BookSettingsModule} from './book-settings/book-settings.module';
 import { BookComponent } from './book/book.component';
+import {SecurityModule} from '../security/security.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BookComponent } from './book/book.component';
     FormsModule,
     MaterialModule,
     FlexLayoutModule,
-    BookSettingsModule
+    BookSettingsModule,
+    SecurityModule
   ]
 })
 export class BookLibraryModule {

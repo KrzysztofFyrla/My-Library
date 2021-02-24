@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+<div *ngIf="currentUser; else loggedOut">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #loggedOut>
+  <app-login></app-login>
+</ng-template>
